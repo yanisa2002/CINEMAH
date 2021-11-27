@@ -1,15 +1,17 @@
 import React from 'react'
 import Grid from '../../Grid'
 import Thumb from '../Thumb'
-// import SearchBar from '../../SearchBar'
+import SearchBar from '../../SearchBar'
+import { useThumbFench } from '../../Hook/useThumbFench'
 // import * as FaIcons from "react-icons/fa";
 // import Card from '../../Card' 
 import MovieimgNow from '../../movieDataNow'
 
-function Movie() {
+function Movie() { 
+    const { setSearchTerm } = useThumbFench();
     return(
         <div className='allMovie'>
-            {/* <SearchBar /> */}
+            <SearchBar setSearchTerm={setSearchTerm} />
             <Grid header='Popular Movies'>
                 {MovieimgNow.map(movie => (
                     <Thumb
@@ -20,19 +22,6 @@ function Movie() {
                     />
                 ))}
             </Grid>
-            {/* <div className='ui search'>
-                <div  className='ui icon input'>
-                    <input type="text" placeholder="Search movie" className="prompt" />
-                    
-                </div>
-
-            {       MovieimgNow && MovieimgNow.map((item,index)=>         
-                        <div key={index}>
-                           <Card number={item.nm} img={item.img}  btn='True'/> 
-                        </div>
-                    )
-                }
-            </div> */}
         </div>
     )
 }
