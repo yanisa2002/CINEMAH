@@ -63,6 +63,9 @@ const Register = () => {
                 </button>
             </form>
         </div>
+        {/* <div className="form-content-right">
+            test
+        </div> */}
         </div>
     );
 };

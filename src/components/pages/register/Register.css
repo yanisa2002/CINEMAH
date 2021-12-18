@@ -1,11 +1,13 @@
 .form-content-left {
     border-radius: 10px;
-    width: 50%;
+    width: 45%;
     position: relative;
     background: linear-gradient(90deg, rgb(40, 40, 40) 0%, rgb(17, 17, 17) 100%);
-    padding: 20px;
+    padding: 20px 0 20px 84px;
     /* margin-top: 7px; */
 }
+
+
 
 .all {
     position: relative;
@@ -14,16 +16,16 @@
 
     background: radial-gradient(at 50% 0%,
     #c370e8 0%,
-    #642cc7 35%,
-    #0e094f 80%,
-    #111138 100%
+    #642cc7 22.45%,
+    #0e094f 68.75%,
+    #111138 97.92%
     );
-    padding: 100px;
+    padding: 100px 0 50px 75px;
 }
 /* .form {
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 500%;
+    left: 40%;
     transform: translate(-50%, -50%);
     width: 90%;
     height: 100%;
@@ -39,6 +41,7 @@
     width: 80%;
     margin-bottom: 1rem;
     color: #fff;
+    /* background-color: tomato; */
 }
 
 .form-label {
