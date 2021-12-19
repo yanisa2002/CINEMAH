@@ -1,11 +1,13 @@
 import React from "react";
+import useForm from "../../Hook/useForm";
 import "./Register.css";
 
 const Register = () => {
+    const {handleChange, values, handleSubmit} = useForm();
     return (
         <div className="all">
         <div className="form-content-left">
-            <form className="form">
+            <form className="form" onSubmit={handleSubmit}>
                 <h1>Register</h1>
                 <div className="form-inputs">
                     <label htmlFor="username" className="form-label">
@@ -17,6 +19,8 @@ const Register = () => {
                         name="username" 
                         className="form-input"
                         placeholder="Username"
+                        value={values.username}
+                        onChange={handleChange}
                     />
                 </div>
                 <div className="form-inputs">
@@ -29,6 +33,8 @@ const Register = () => {
                         name="email" 
                         className="form-input"
                         placeholder="Email"
+                        value={values.email}
+                        onChange={handleChange}
                     />
                 </div>
                 <div className="form-inputs">
@@ -41,6 +47,8 @@ const Register = () => {
                         name="password" 
                         className="form-input"
                         placeholder="Password"
+                        value={values.password}
+                        onChange={handleChange}
                     />
                 </div>
                 <div className="form-inputs">
@@ -49,10 +57,12 @@ const Register = () => {
                     </label>
                     <input 
                         id="password2"
-                        type="password2" 
+                        type="password" 
                         name="password2" 
                         className="form-input"
                         placeholder="Confirm Password"
+                        value={values.password2}
+                        onChange={handleChange}
                     />
                 </div>
                 <button className="form-input-btn" type="submit">
