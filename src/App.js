@@ -7,12 +7,13 @@ import Buyticket from './components/pages/Buyticket/Buyticket';
 import MovieimgNow from './components/movieDataNow';
 import Movie from './components/pages/Thumb/Movie';
 import Register from './components/pages/register/Register';
+import Form from './components/pages/register/Form';
 
 
 function App() {
   return (
     <div className='SignUp'>
-      <Register />
+      <Form />
     </div>
     // <div id="main">
     // <Router>
